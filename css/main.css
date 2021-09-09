@@ -1,21 +1,3 @@
-/* CSS HEX 
---bottle-green: #1b7051ff;
---medium-aquamarine: #6de8bbff;
---granny-smith-apple: #afd391ff;
---dark-khaki: #d0c97cff;
---orange-yellow-crayola: #e0c472ff;
---maximum-yellow-red: #f0be67ff;
---wintergreen-dream: #558775ff;
---gunmetal: #202733ff;
-*/
-
-/*
-Fonts:
-rounded
-font-family: 'Comfortaa', cursive;
-*/
-
-
 body {
   background:
   radial-gradient(circle, transparent 20%, #202733 20%, #202733 80%, transparent 80%, transparent),
