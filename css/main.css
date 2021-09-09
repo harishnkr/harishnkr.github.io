@@ -33,7 +33,7 @@ body {
 }
     
 /* Change the background color on mouse-over */
-.header a:hover {
+.header-right a:hover {
     background-color: #47a560;
     color: black;
     font-weight: 1500;
@@ -44,6 +44,7 @@ body {
     float: right;
     font-weight: bolder;
     font-size:large;
+    
   }
   
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
@@ -55,10 +56,19 @@ body {
     .header-right {
       float: none;
       display: block;
-      font-family: 'Comfortaa', cursive;
     }
   }
-
   
+  .main  {
+    overflow: hidden;
+    background-color:#0a856a;
+    text-align: center;
+    padding: 20px 10px 10px ;
+    border-radius: 25px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bolder;
+    font-size:large;
+    color: #462226;  
+    margin-top: 20px;
 
-
+  }
