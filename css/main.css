@@ -70,11 +70,14 @@ body {
       float: none;
       display: block;
       text-align: left;
+      pointer-events: none;
     }
     .header-right {
       float: none;
       font-family: 'Comfortaa', cursive;
     }
   }
+
+  
 
 
