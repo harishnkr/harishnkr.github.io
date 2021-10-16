@@ -1,3 +1,3 @@
-# Haritronic909.github.io
+# harishnkr.github.io
 
 Check out my website [here](https://harishnkr.github.io)
