@@ -4,7 +4,7 @@
     "href": "bookmarks.html",
     "title": "Bookmarks",
     "section": "",
-    "text": "Bookmarks so that I can refer to whenever needed\n\n\n\nRetired WISC Professor’s TeX docs.\nStephen Gildeas page\nKarl Voit Org Mode Blogs\nSkybert Programmer, works on Emacs, Unix etc."
+    "text": "Bookmarks so that I can refer to whenever needed\n\n\n\nRetired WISC Professor’s TeX docs.\nStephen Gildeas page\nKarl Voit Org Mode Blogs\nSkybert Programmer, works on Emacs, Unix etc.\n\n\n\n\nSites where others (usually individuals) post online using quarto websites. Bookmarking so that I can checkout later.\n\nCameron Patrick"
   },
   {
     "objectID": "bookmarks.html#people",
@@ -14,11 +14,53 @@
     "text": "Retired WISC Professor’s TeX docs.\nStephen Gildeas page\nKarl Voit Org Mode Blogs\nSkybert Programmer, works on Emacs, Unix etc."
   },
   {
-    "objectID": "posts/2024-10-08-doom-emacs/index.html",
-    "href": "posts/2024-10-08-doom-emacs/index.html",
-    "title": "Setting up DooM Emacs",
+    "objectID": "bookmarks.html#quarto-websites",
+    "href": "bookmarks.html#quarto-websites",
+    "title": "Bookmarks",
     "section": "",
-    "text": "I planned to use Emacs full time and rather than building emacs config from scratch ( which I have tried but felt cumbersome to work with) I thought of using DooM Emacs. Hence this post to document the steps that I take on Arch linux so that it helps others as well as myself the next time I do a fresh setup. The following guide is made for me, as well as for those who has some idea on using Vim or Vi like editors since DooM Emacs runs more or less like Vim, with the extra functionality of Emacs.\n\nPrerequisites\nThis guide assumes you are runnig on Arch Linux with ripgrep and fd (optional) installed.\n\n\nSetting up till getting a working Emacs\nStart by installing the emacs package from the Arch repositories. Then run the following commands to download the doom emacs files:\ngit clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs\n~/.config/emacs/bin/doom install\nOnce done with that, open up Emacs.\nFor me, I found that some glyphs were not rendered properly, so install the necessary fonts by running the command M-x nerd-icons-install-fonts.\nOpen the init.el file in the doom config and edit whatever options that are required.\nSince I am following DT’s guide, I thought the next step of installing the EviL Tutor made sense. Hence I install it by adding it to the packages.el file.\nBefore moving on, I would like to change the font size, so I uncommented the default font lines provided in the config.el file. But this involves installing the Fira Code and the Fira Sans fonts using Pacman in Arch. Also I changed the font size given by default (as of writing this guide, DooM Emacs is on version 24.11).\nEvery time a change is made in the config files in the doom config directory, make sure to quit and emacs to see the new changes.\nNow you can move on, learn along the way by going through the DooM documentation (you can view it on Emacs by typing SPC h d h). Hope this helps."
+    "text": "Sites where others (usually individuals) post online using quarto websites. Bookmarking so that I can checkout later.\n\nCameron Patrick"
+  },
+  {
+    "objectID": "posts/2025-05-10-arch-linux-installation/index.html",
+    "href": "posts/2025-05-10-arch-linux-installation/index.html",
+    "title": "Arch Linux Installation",
+    "section": "",
+    "text": "This is my post on documenting a fresh Arch Setup on my newer laptop. I hope by doing this exercise I can go back to troubleshoot any possible issues before, during and after the setup.\nThis post is to be utilised along with the Arch wiki Guide on installation, and more importantly, many steps would be different from the main page recommendations since it will be customised and curated based on my needs."
+  },
+  {
+    "objectID": "posts/2025-05-10-arch-linux-installation/index.html#partitioning",
+    "href": "posts/2025-05-10-arch-linux-installation/index.html#partitioning",
+    "title": "Arch Linux Installation",
+    "section": "Partitioning",
+    "text": "Partitioning\nStart by clearing some space (shrink volume, as it is so called) from Windows partition manager (Disk Management utility as it is known). Choosing how much space depends on the needs and the past experience. As far as I am concerned, the total space is around 1TB, out of which I have to allocate from the available 950 GB space.\nLet us do a bunch of math to sort this issue out. In terms of usage, the / or the root partition is around 22GB which can be extended to about 30GB at max. I have a separate /var partition earlier which I believe I dont require in this installation. I would rather club it in the root partition. The /var partition is around 20GB which has hit the limit a few times. It is not an issue as it can be easily cleaned from time to time. Adding it to the root we get around 50GB.\nThe /home partition uses 18GBG for now and I plan to use local LLMs in the future, it would be good enough for a start to have the size upto around 100GB or more if needed. Also since the ram could be full from time to time, it would be fine to have some swap partition. My current system uses a swapfile located in the root partition, and I would expect it to use(if necessary) upto maybe 10GB.\nThe /boot/efi partition uses less than half an MB. So it would be safe to make this partition around 100MB\nAdding it all up we get around 155GB. Nevertheless what we have done so far is just a practice to see whether it would be worth shrinking up volume on the current disk which already has around 750GB of space free.\nHence we can shrink around 250GB of volume, of which:\n\n60GB which accounts for / or root partition, /var partition as well as for the swap file\n150GB for the /home partition\naround 100MB for containing /boot/efi\n\nSince the Windows Disk Management asks for input in MBs, it seems easier to input to 216000MB, and whatever is left after the first 2 partitions can be allocated to the /boot/efi partition.\nI use Ventoy on the USB for running the Arch ISO, and it is always better to use the latest image\nAs I have mentioned before, this post is to be used alongside the ArchWiki installation guide (as you might have guessed from the mental gymnastics that I have done so far to calculate the partition sizes). To make things easier, I would create a Github repo to upload files that I create along.\nWhile doing the whole thing I came across another issue that might need a whole post on its own. Basically you need to setup a BIOS password to enable booting through other media. Doing that bricks your Windows pin/password. Moreover, in order to boot other media, you have to change some other options as well(enable F12 boot menu)."
+  },
+  {
+    "objectID": "posts/2025-05-10-arch-linux-installation/index.html#arch-iso-steps-to-follow",
+    "href": "posts/2025-05-10-arch-linux-installation/index.html#arch-iso-steps-to-follow",
+    "title": "Arch Linux Installation",
+    "section": "Arch ISO steps to follow",
+    "text": "Arch ISO steps to follow\nAt first I planned to manually install. My previous tries to run the Archinstall script long back failed. But I did go forward and went on to run the Archinstall script. Points to keep in mind that include the changes from the base archinstall script:\n\nlocale is en_IN, dont forget to add en_US.utf8 too\n/ is ext4 60GB, /home is ext4 150Gb and third partition is /boot/efi which must be fat32 and to be made bootable.\nused bspwm as the window-manager\ntimezone given as Asia/Kolkata\ndont forget to add git and os-prober as other packages that needs to be installed\nMake sure to install sddm as the greeter\n\nOnce the script runs it asks whether to chroot. Do that and install the necessary packages. Installing git would be a starting point. Change to a regular user to install yay.\nMost of the following instructions are automated in the install script from this repo. The changes that are being done is only mentioned in the part below. Note that many command would be run in sudo elevated privileges so beware before running the scripts"
+  },
+  {
+    "objectID": "posts/2025-05-10-arch-linux-installation/index.html#detecting-windows",
+    "href": "posts/2025-05-10-arch-linux-installation/index.html#detecting-windows",
+    "title": "Arch Linux Installation",
+    "section": "Detecting Windows",
+    "text": "Detecting Windows\nIn order for os-prober to run, make sure the line is present in /etc/default/grub GRUB_DISABLE_OS_PROBER=false sudo grub-mkconfig -o /boot/grub/grub.cfg\nMake sure to mount the Windows filesystem. Make a directory /c and mount it. sudo mkdir /c sudo mount /dev/WINDOWS_DIR /c (change windows directory with whatever your mountpoint is)"
+  },
+  {
+    "objectID": "posts/2025-05-10-arch-linux-installation/index.html#hardware-tweaks",
+    "href": "posts/2025-05-10-arch-linux-installation/index.html#hardware-tweaks",
+    "title": "Arch Linux Installation",
+    "section": "Hardware Tweaks",
+    "text": "Hardware Tweaks\nSome files are to be loaded for optimal working of the hardware. Most of the drivers run by default easily on Arch. Nevertheless there may be changes needed as well. Let us go one by one:\nFirstly, I have to fix the mousepad issue. This involves copying the libinput file to the right place.\nsudo cp ~/archinstall/40-libinput.conf /etc/X11/xorg.conf.d/ ## Install Grub Theme\nI like to install my own BSOL theme for Grub so that is also done as well."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "Setting Up Hostnames\n\n\n\nLinux\n\nNetworking\n\n\n\nNaming is hard, even your computers\n\n\n\n\n\n\nMay 13, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nArch Linux Installation\n\n\n\nArchlinux\n\nLinux\n\n\n\nDocumenting new fresh Arch Linux installation\n\n\n\n\n\n\nMay 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting up DooM Emacs\n\n\n\nArchlinux\n\nEmacs\n\n\n\nHow I set up DooM Emacs on Arch Linux\n\n\n\n\n\n\nOct 8, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -28,11 +70,18 @@
     "text": "Hello\nWelcome to my personal website\nYou can view my github account here"
   },
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "My Blog",
+    "objectID": "posts/2024-10-08-doom-emacs/index.html",
+    "href": "posts/2024-10-08-doom-emacs/index.html",
+    "title": "Setting up DooM Emacs",
     "section": "",
-    "text": "Setting up DooM Emacs\n\n\n  \nArchlinux\n  \nEmacs\n  \n\n\nHow I set up DooM Emacs on Arch Linux\n\n\n\nOct 8, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "I planned to use Emacs full time and rather than building emacs config from scratch ( which I have tried but felt cumbersome to work with) I thought of using DooM Emacs. Hence this post to document the steps that I take on Arch linux so that it helps others as well as myself the next time I do a fresh setup. The following guide is made for me, as well as for those who has some idea on using Vim or Vi like editors since DooM Emacs runs more or less like Vim, with the extra functionality of Emacs.\n\nPrerequisites\nThis guide assumes you are runnig on Arch Linux with ripgrep and fd (optional) installed.\n\n\nSetting up till getting a working Emacs\nStart by installing the emacs package from the Arch repositories. Then run the following commands to download the doom emacs files:\ngit clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs\n~/.config/emacs/bin/doom install\nOnce done with that, open up Emacs.\nFor me, I found that some glyphs were not rendered properly, so install the necessary fonts by running the command M-x nerd-icons-install-fonts.\nOpen the init.el file in the doom config and edit whatever options that are required.\nSince I am following DT’s guide, I thought the next step of installing the EviL Tutor made sense. Hence I install it by adding it to the packages.el file.\nBefore moving on, I would like to change the font size, so I uncommented the default font lines provided in the config.el file. But this involves installing the Fira Code and the Fira Sans fonts using Pacman in Arch. Also I changed the font size given by default (as of writing this guide, DooM Emacs is on version 24.11).\nEvery time a change is made in the config files in the doom config directory, make sure to quit and emacs to see the new changes.\nNow you can move on, learn along the way by going through the DooM documentation (you can view it on Emacs by typing SPC h d h). Hope this helps."
+  },
+  {
+    "objectID": "posts/2025-05-13-hostname/index.html",
+    "href": "posts/2025-05-13-hostname/index.html",
+    "title": "Setting Up Hostnames",
+    "section": "",
+    "text": "In search for the right hostnames, you end up in the weirdest of places. This post would help anyone in making sure your system hostnames are proper when renaming it.\n\nIntro\nAs my arsenal of systems are increasing, I want a unique hostname for each of them. When we use a variety of services online, the hostnames must be unique but easy to remember as well. In order to make sure no stone is left unturned, I am writing the steps to make sure the renaming is performed robustly\n\n\nChoosing a convention\nSince the names must have some sort of coherence but at the same unique and easy to remember. I am pretty sure using Pokemon names for their hostnames is not unique but I thought I will go with it. There are plenty of reasons to do this.\n\nIt is easy to remember\nI will never run out of names\nIt is fun\nIt gives some sort of personality to your computer\nNaming can be done based on the looks of your laptop.\n\nTo make things easy, I will choose from the Pokedex numbering of pkemons till it relates with the appearance of my device.\n\n\nCharmeleon\nMy first ever Laptop is a red Asus Vivobook S15. The name Charmeleon fits right.\nNow that I bought a heavy Acer Nitro gaming laptop, I dont mind calling it Blastoise for now.\n\n\nUpdating the names\nSearch and replace the names in these files accordingly for a Linux system:\n\n/etc/hostname\n/etc/hosts (you can add the name along with localhost) Usually 127.0.0.1 is reserved for localhost. Adding 127.0.1.1 to the unique hostname is the practice in Debian derivatives and would also work in Arch"
   },
   {
     "objectID": "about.html",
