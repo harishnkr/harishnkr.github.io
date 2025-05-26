@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
     "listing": "/posts.html",
     "items": [
       "/posts/2025-05-13-hostname/index.html",
