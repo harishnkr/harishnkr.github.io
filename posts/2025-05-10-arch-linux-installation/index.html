@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-45d1006018d61b3f0902471ffc05269b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -162,6 +162,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#detecting-windows" id="toc-detecting-windows" class="nav-link" data-scroll-target="#detecting-windows">Detecting Windows</a></li>
   <li><a href="#hardware-tweaks" id="toc-hardware-tweaks" class="nav-link" data-scroll-target="#hardware-tweaks">Hardware Tweaks</a></li>
+  <li><a href="#install-grub-theme" id="toc-install-grub-theme" class="nav-link" data-scroll-target="#install-grub-theme">Install Grub Theme</a></li>
   </ul></li>
   <li><a href="#other-setups" id="toc-other-setups" class="nav-link" data-scroll-target="#other-setups">Other Setups</a></li>
   <li><a href="#ending-comments" id="toc-ending-comments" class="nav-link" data-scroll-target="#ending-comments">Ending Comments</a></li>
@@ -235,7 +236,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="hardware-tweaks">Hardware Tweaks</h2>
 <p>Some files are to be loaded for optimal working of the hardware. Most of the drivers run by default easily on Arch. Nevertheless there may be changes needed as well. Let us go one by one:</p>
 <p>Firstly, I have to fix the mousepad issue. This involves copying the libinput file to the right place.</p>
-<p><code>sudo cp ~/archinstall/40-libinput.conf /etc/X11/xorg.conf.d/</code> ## Install Grub Theme</p>
+<p><code>sudo cp ~/archinstall/40-libinput.conf /etc/X11/xorg.conf.d/</code></p>
+</section>
+<section id="install-grub-theme" class="level2">
+<h2 class="anchored" data-anchor-id="install-grub-theme">Install Grub Theme</h2>
 <p>I like to install my own BSOL theme for Grub so that is also done as well.</p>
 </section>
 </section>
@@ -656,17 +660,14 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="light">
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
 <script>
   function loadGiscus() {
     // Function to get the theme based on body class
     const getTheme = () => {
       let baseTheme = document.getElementById('giscus-base-theme').value;
       let altTheme = document.getElementById('giscus-alt-theme').value;
-      if (authorPrefersDark) {
-          [baseTheme, altTheme] = [altTheme, baseTheme];
-      }
       return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
     };
     const script = document.createElement("script");

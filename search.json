@@ -4,7 +4,7 @@
     "href": "bookmarks.html",
     "title": "Bookmarks",
     "section": "",
-    "text": "Bookmarks so that I can refer to whenever needed\n\n\n\nRetired WISC Professor’s TeX docs.\nStephen Gildeas page\nKarl Voit Org Mode Blogs\nSkybert Programmer, works on Emacs, Unix etc.\n\n\n\n\nSites where others (usually individuals) post online using quarto websites. Bookmarking so that I can checkout later.\n\nCameron Patrick\nAlex Bass. Written Quarto/Latex resume template post.\nDeepsha Menghani. Bunch of Quarto posts. Checkout this presentation."
+    "text": "Bookmarks so that I can refer to whenever needed\n\n\n\nRetired WISC Professor’s TeX docs.\nStephen Gildeas page\nKarl Voit Org Mode Blogs\nSkybert Programmer, works on Emacs, Unix etc.\n\n\n\n\nSites where others (usually individuals) post online using quarto websites. Bookmarking so that I can checkout later.\n\nCameron Patrick\nAlex Bass. Written Quarto/Latex resume template post.\nDeepsha Menghani. Bunch of Quarto posts. Checkout this presentation.\nLouise Sinks. Interesting post on why one should use Quarto."
   },
   {
     "objectID": "bookmarks.html#people",
@@ -18,7 +18,7 @@
     "href": "bookmarks.html#quarto-websites",
     "title": "Bookmarks",
     "section": "",
-    "text": "Sites where others (usually individuals) post online using quarto websites. Bookmarking so that I can checkout later.\n\nCameron Patrick\nAlex Bass. Written Quarto/Latex resume template post.\nDeepsha Menghani. Bunch of Quarto posts. Checkout this presentation."
+    "text": "Sites where others (usually individuals) post online using quarto websites. Bookmarking so that I can checkout later.\n\nCameron Patrick\nAlex Bass. Written Quarto/Latex resume template post.\nDeepsha Menghani. Bunch of Quarto posts. Checkout this presentation.\nLouise Sinks. Interesting post on why one should use Quarto."
   },
   {
     "objectID": "posts/2025-05-13-hostname/index.html",
@@ -81,6 +81,13 @@
     "href": "posts/2025-05-10-arch-linux-installation/index.html#hardware-tweaks",
     "title": "Arch Linux Installation",
     "section": "Hardware Tweaks",
-    "text": "Hardware Tweaks\nSome files are to be loaded for optimal working of the hardware. Most of the drivers run by default easily on Arch. Nevertheless there may be changes needed as well. Let us go one by one:\nFirstly, I have to fix the mousepad issue. This involves copying the libinput file to the right place.\nsudo cp ~/archinstall/40-libinput.conf /etc/X11/xorg.conf.d/ ## Install Grub Theme\nI like to install my own BSOL theme for Grub so that is also done as well."
+    "text": "Hardware Tweaks\nSome files are to be loaded for optimal working of the hardware. Most of the drivers run by default easily on Arch. Nevertheless there may be changes needed as well. Let us go one by one:\nFirstly, I have to fix the mousepad issue. This involves copying the libinput file to the right place.\nsudo cp ~/archinstall/40-libinput.conf /etc/X11/xorg.conf.d/"
+  },
+  {
+    "objectID": "posts/2025-05-10-arch-linux-installation/index.html#install-grub-theme",
+    "href": "posts/2025-05-10-arch-linux-installation/index.html#install-grub-theme",
+    "title": "Arch Linux Installation",
+    "section": "Install Grub Theme",
+    "text": "Install Grub Theme\nI like to install my own BSOL theme for Grub so that is also done as well."
   }
 ]
