@@ -4,7 +4,7 @@
     "href": "bookmarks.html",
     "title": "Bookmarks",
     "section": "",
-    "text": "Bookmarks so that I can refer to whenever needed\n\n\n\nRetired WISC Professor’s TeX docs.\nStephen Gildeas page\nKarl Voit Org Mode Blogs\nSkybert Programmer, works on Emacs, Unix etc.\n\n\n\n\nSites where others (usually individuals) post online using quarto websites. Bookmarking so that I can checkout later.\n\nCameron Patrick"
+    "text": "Bookmarks so that I can refer to whenever needed\n\n\n\nRetired WISC Professor’s TeX docs.\nStephen Gildeas page\nKarl Voit Org Mode Blogs\nSkybert Programmer, works on Emacs, Unix etc.\n\n\n\n\nSites where others (usually individuals) post online using quarto websites. Bookmarking so that I can checkout later.\n\nCameron Patrick\nAlex Bass. Written Quarto/Latex resume template post.\nDeepsha Menghani. Bunch of Quarto posts. Checkout this presentation."
   },
   {
     "objectID": "bookmarks.html#people",
@@ -18,7 +18,35 @@
     "href": "bookmarks.html#quarto-websites",
     "title": "Bookmarks",
     "section": "",
-    "text": "Sites where others (usually individuals) post online using quarto websites. Bookmarking so that I can checkout later.\n\nCameron Patrick"
+    "text": "Sites where others (usually individuals) post online using quarto websites. Bookmarking so that I can checkout later.\n\nCameron Patrick\nAlex Bass. Written Quarto/Latex resume template post.\nDeepsha Menghani. Bunch of Quarto posts. Checkout this presentation."
+  },
+  {
+    "objectID": "posts/2025-05-13-hostname/index.html",
+    "href": "posts/2025-05-13-hostname/index.html",
+    "title": "Setting Up Hostnames",
+    "section": "",
+    "text": "In search for the right hostnames, you end up in the weirdest of places. This post would help anyone in making sure your system hostnames are proper when renaming it.\n\nIntro\nAs my arsenal of systems are increasing, I want a unique hostname for each of them. When we use a variety of services online, the hostnames must be unique but easy to remember as well. In order to make sure no stone is left unturned, I am writing the steps to make sure the renaming is performed robustly\n\n\nChoosing a convention\nSince the names must have some sort of coherence but at the same unique and easy to remember. I am pretty sure using Pokemon names for their hostnames is not unique but I thought I will go with it. There are plenty of reasons to do this.\n\nIt is easy to remember\nI will never run out of names\nIt is fun\nIt gives some sort of personality to your computer\nNaming can be done based on the looks of your laptop.\n\nTo make things easy, I will choose from the Pokedex numbering of pkemons till it relates with the appearance of my device.\n\n\nCharmeleon\nMy first ever Laptop is a red Asus Vivobook S15. The name Charmeleon fits right.\nNow that I bought a heavy Acer Nitro gaming laptop, I dont mind calling it Blastoise for now.\n\n\nUpdating the names\nSearch and replace the names in these files accordingly for a Linux system:\n\n/etc/hostname\n/etc/hosts (you can add the name along with localhost) Usually 127.0.0.1 is reserved for localhost. Adding 127.0.1.1 to the unique hostname is the practice in Debian derivatives and would also work in Arch"
+  },
+  {
+    "objectID": "posts/2024-10-08-doom-emacs/index.html",
+    "href": "posts/2024-10-08-doom-emacs/index.html",
+    "title": "Setting up DooM Emacs",
+    "section": "",
+    "text": "I planned to use Emacs full time and rather than building emacs config from scratch ( which I have tried but felt cumbersome to work with) I thought of using DooM Emacs. Hence this post to document the steps that I take on Arch linux so that it helps others as well as myself the next time I do a fresh setup. The following guide is made for me, as well as for those who has some idea on using Vim or Vi like editors since DooM Emacs runs more or less like Vim, with the extra functionality of Emacs.\n\nPrerequisites\nThis guide assumes you are runnig on Arch Linux with ripgrep and fd (optional) installed.\n\n\nSetting up till getting a working Emacs\nStart by installing the emacs package from the Arch repositories. Then run the following commands to download the doom emacs files:\ngit clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs\n~/.config/emacs/bin/doom install\nOnce done with that, open up Emacs.\nFor me, I found that some glyphs were not rendered properly, so install the necessary fonts by running the command M-x nerd-icons-install-fonts.\nOpen the init.el file in the doom config and edit whatever options that are required.\nSince I am following DT’s guide, I thought the next step of installing the EviL Tutor made sense. Hence I install it by adding it to the packages.el file.\nBefore moving on, I would like to change the font size, so I uncommented the default font lines provided in the config.el file. But this involves installing the Fira Code and the Fira Sans fonts using Pacman in Arch. Also I changed the font size given by default (as of writing this guide, DooM Emacs is on version 24.11).\nEvery time a change is made in the config files in the doom config directory, make sure to quit and emacs to see the new changes.\nNow you can move on, learn along the way by going through the DooM documentation (you can view it on Emacs by typing SPC h d h). Hope this helps."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "harishnkr",
+    "section": "",
+    "text": "Hello\nWelcome to my personal website\nYou can view my github account here"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Setting Up Hostnames\n\n\n\nLinux\n\nNetworking\n\n\n\nNaming is hard, even your computers\n\n\n\nK. Harishankar\n\n\nMay 13, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nArch Linux Installation\n\n\n\nArchlinux\n\nLinux\n\n\n\nDocumenting new fresh Arch Linux installation\n\n\n\nK. Harishankar\n\n\nMay 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting up DooM Emacs\n\n\n\nArchlinux\n\nEmacs\n\n\n\nHow I set up DooM Emacs on Arch Linux\n\n\n\nK. Harishankar\n\n\nOct 8, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2025-05-10-arch-linux-installation/index.html",
@@ -54,40 +82,5 @@
     "title": "Arch Linux Installation",
     "section": "Hardware Tweaks",
     "text": "Hardware Tweaks\nSome files are to be loaded for optimal working of the hardware. Most of the drivers run by default easily on Arch. Nevertheless there may be changes needed as well. Let us go one by one:\nFirstly, I have to fix the mousepad issue. This involves copying the libinput file to the right place.\nsudo cp ~/archinstall/40-libinput.conf /etc/X11/xorg.conf.d/ ## Install Grub Theme\nI like to install my own BSOL theme for Grub so that is also done as well."
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "My Blog",
-    "section": "",
-    "text": "Setting Up Hostnames\n\n\n\nLinux\n\nNetworking\n\n\n\nNaming is hard, even your computers\n\n\n\n\n\n\nMay 13, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nArch Linux Installation\n\n\n\nArchlinux\n\nLinux\n\n\n\nDocumenting new fresh Arch Linux installation\n\n\n\n\n\n\nMay 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting up DooM Emacs\n\n\n\nArchlinux\n\nEmacs\n\n\n\nHow I set up DooM Emacs on Arch Linux\n\n\n\n\n\n\nOct 8, 2024\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Personal Website",
-    "section": "",
-    "text": "Hello\nWelcome to my personal website\nYou can view my github account here"
-  },
-  {
-    "objectID": "posts/2024-10-08-doom-emacs/index.html",
-    "href": "posts/2024-10-08-doom-emacs/index.html",
-    "title": "Setting up DooM Emacs",
-    "section": "",
-    "text": "I planned to use Emacs full time and rather than building emacs config from scratch ( which I have tried but felt cumbersome to work with) I thought of using DooM Emacs. Hence this post to document the steps that I take on Arch linux so that it helps others as well as myself the next time I do a fresh setup. The following guide is made for me, as well as for those who has some idea on using Vim or Vi like editors since DooM Emacs runs more or less like Vim, with the extra functionality of Emacs.\n\nPrerequisites\nThis guide assumes you are runnig on Arch Linux with ripgrep and fd (optional) installed.\n\n\nSetting up till getting a working Emacs\nStart by installing the emacs package from the Arch repositories. Then run the following commands to download the doom emacs files:\ngit clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs\n~/.config/emacs/bin/doom install\nOnce done with that, open up Emacs.\nFor me, I found that some glyphs were not rendered properly, so install the necessary fonts by running the command M-x nerd-icons-install-fonts.\nOpen the init.el file in the doom config and edit whatever options that are required.\nSince I am following DT’s guide, I thought the next step of installing the EviL Tutor made sense. Hence I install it by adding it to the packages.el file.\nBefore moving on, I would like to change the font size, so I uncommented the default font lines provided in the config.el file. But this involves installing the Fira Code and the Fira Sans fonts using Pacman in Arch. Also I changed the font size given by default (as of writing this guide, DooM Emacs is on version 24.11).\nEvery time a change is made in the config files in the doom config directory, make sure to quit and emacs to see the new changes.\nNow you can move on, learn along the way by going through the DooM documentation (you can view it on Emacs by typing SPC h d h). Hope this helps."
-  },
-  {
-    "objectID": "posts/2025-05-13-hostname/index.html",
-    "href": "posts/2025-05-13-hostname/index.html",
-    "title": "Setting Up Hostnames",
-    "section": "",
-    "text": "In search for the right hostnames, you end up in the weirdest of places. This post would help anyone in making sure your system hostnames are proper when renaming it.\n\nIntro\nAs my arsenal of systems are increasing, I want a unique hostname for each of them. When we use a variety of services online, the hostnames must be unique but easy to remember as well. In order to make sure no stone is left unturned, I am writing the steps to make sure the renaming is performed robustly\n\n\nChoosing a convention\nSince the names must have some sort of coherence but at the same unique and easy to remember. I am pretty sure using Pokemon names for their hostnames is not unique but I thought I will go with it. There are plenty of reasons to do this.\n\nIt is easy to remember\nI will never run out of names\nIt is fun\nIt gives some sort of personality to your computer\nNaming can be done based on the looks of your laptop.\n\nTo make things easy, I will choose from the Pokedex numbering of pkemons till it relates with the appearance of my device.\n\n\nCharmeleon\nMy first ever Laptop is a red Asus Vivobook S15. The name Charmeleon fits right.\nNow that I bought a heavy Acer Nitro gaming laptop, I dont mind calling it Blastoise for now.\n\n\nUpdating the names\nSearch and replace the names in these files accordingly for a Linux system:\n\n/etc/hostname\n/etc/hosts (you can add the name along with localhost) Usually 127.0.0.1 is reserved for localhost. Adding 127.0.1.1 to the unique hostname is the practice in Debian derivatives and would also work in Arch"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   }
 ]
