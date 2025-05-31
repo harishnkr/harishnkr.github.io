@@ -3,13 +3,19 @@ project:
   output-dir: docs
 
 website:
+  title: "harishnkr"
+  site-url: "https://www.harishnkr.in"
+  description: "K. Harishankar's site"
   navbar:
     left:
-      - href: index.qmd
-        text: harishnkr
       - href: bookmarks.qmd
         text: Bookmarks
       - href: posts.qmd
+    right:
+      - icon: rss
+        href: posts.xml
+      - icon: github
+        href: https://www.github.com/harishnkr
 
 format:
   html:
