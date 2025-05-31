@@ -1,0 +1,128 @@
+---
+title: "Arch Linux Installation"
+description: "Documenting new fresh Arch Linux installation"
+date: 05-08-2025
+categories: [Archlinux, Linux] 
+image: preview-image.png 
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+This is my post on documenting a fresh Arch Setup on my newer laptop. I hope by doing this exercise I can go back to troubleshoot any possible issues before, during and after the setup.
+
+This post is to be utilised along with the Arch wiki [Guide](https://wiki.archlinux.org/title/Installation_guide) on installation, and more importantly, many steps would be different from the main page recommendations since it will be customised and curated based on my needs.
+
+# Motivation
+
+Compared to my progress in installation of a Arch Linux setups in the past, this time I thought documenting the process would help me in different ways:
+
++ It can help in troubleshooting throughout the processs as well as in the future.
++ May help in creating scripts for automated installation in my future attempts of Arch installs.
+
+I would divide the post into 2 parts, pre setup which include some necessary steps that must be taken regardless of customising(from a personal perspective, even this could be subjected to changes for many people), and post setup, in which I can document the steps I could take to reach the setup that I currently use in my old laptop.
+
+I would try to keep the steps which I am familiar and already well documented in the Arch wiki short and note any important points to take care which may or may not be specific to my setup.
+
+# Pre-Setup
+
+## Partitioning
+
+Start by clearing some space (shrink volume, as it is so called) from Windows partition manager (Disk Management utility as it is known).
+Choosing how much space depends on the needs and the past experience. As far as I am concerned, the total space is around 1TB, out of which I have to allocate from the available 950 GB space.
+
+Let us do a bunch of math to sort this issue out. 
+In terms of usage, the `/` or the root partition is around 22GB which can be extended to about 30GB at max. I have a separate `/var` partition earlier which I believe I dont require in this installation. I would rather club it in the root partition. The `/var` partition is around 20GB which has hit the limit a few times. It is not an issue as it can be easily cleaned from time to time. Adding it to the root we get around 50GB. 
+
+The `/home` partition uses 18GBG for now and I plan to use local LLMs in the future, it would be good enough for a start to have the size upto around 100GB or more if needed.
+Also since the ram could be full from time to time, it would be fine to have some swap partition. My current system uses a swapfile located in the root partition, and I would expect it to use(if necessary) upto maybe 10GB. 
+
+The `/boot/efi` partition uses less than half an MB. So it would be safe to make this partition around 100MB
+
+Adding it all up we get around 155GB. Nevertheless what we have done so far is just a practice to see whether it would be worth shrinking up volume on the current disk which already has around 750GB of space free.
+
+Hence we can shrink around 250GB of volume, of which:
+
++ 60GB which accounts for `/` or root partition, `/var` partition as well as for the swap file
++ 150GB for the `/home` partition
++ around 100MB for containing `/boot/efi` 
+
+Since the Windows Disk Management asks for input in MBs, it seems easier to input to 216000MB, and whatever is left after the first 2 partitions can be allocated to the `/boot/efi` partition.
+
+I use Ventoy on the USB for running the Arch ISO, and it is always better to use the latest image
+
+As I have mentioned before, this post is to be used alongside the ArchWiki installation guide (as you might have guessed from the mental gymnastics that I have done so far to calculate the partition sizes). To make things easier, I would create a Github repo to upload files that I create along.
+
+
+While doing the whole thing I came across another issue that might need a whole post on its own. Basically you need to setup a BIOS password to enable booting through other media. Doing that bricks your Windows pin/password. Moreover, in order to boot other media, you have to change some other options as well(enable F12 boot menu). 
+
+## Arch ISO steps to follow
+
+At first I planned to manually install. My previous tries to run the Archinstall script long back failed. But I did go forward and went on to run the Archinstall script. Points to keep in mind that include the changes from the base archinstall script:
+
++ locale is en_IN, dont forget to add `en_US.utf8` too
++ `/` is ext4 60GB, `/home` is ext4 150Gb and third partition is `/boot/efi` which must be fat32 and to be made bootable. 
++ used bspwm as the window-manager
++ timezone given as Asia/Kolkata
++ dont forget to add git and os-prober as other packages that needs to be installed
++ Make sure to install sddm as the greeter
+
+Once the script runs it asks whether to chroot. Do that and install the necessary packages. Installing git would be a starting point.
+Change to a regular user to install yay.
+
+Most of the following instructions are automated in the install script from this repo. The changes that are being done is only mentioned in the part below.
+Note that many command would be run in sudo elevated privileges so beware before running the scripts
+
+# Post-Setup
+
+After that is done, install the list of packages from the text file in the repo
+`yay -S --needed --noconfirm - < packages.txt
+`
+Install the dotfiles and the NewtonRice files initially
+Some other configs to be included are the termrainbow repo, nvim config and doom emacs config
+To complete the DooM Emacs configuration, it would be good to check out [this](https://harishnkr.in/posts/2024-10-08-doom-emacs/) simple guide that I shared before
+For the terminal to run with minimal configuration, it is important to stow `zsh` and change the shell
+
+For the GUI to run make sure to install a terminal(personal version of ST terminal) and NewtonRice GUI stows.
+Make sure to copy the fonts and wallpapers first
+If TPM or the tmux plugin manager is not installing the plugins, manually run the `install_plugins` script in the tmp scripts folder
+Before rebooting, make sure Windows is recognised in the grub file
+
+## Detecting Windows
+
+In order for os-prober to run, make sure the line is present in `/etc/default/grub`
+`GRUB_DISABLE_OS_PROBER=false`
+`sudo grub-mkconfig -o /boot/grub/grub.cfg`
+
+Make sure to mount the Windows filesystem. 
+Make a directory `/c` and mount it.
+`sudo mkdir /c
+sudo mount /dev/WINDOWS_DIR /c` (change windows directory with whatever your mountpoint is)
+
+## Hardware Tweaks
+
+Some files are to be loaded for optimal working of the hardware. Most of the drivers run by default easily on Arch. Nevertheless there may be changes needed as well. Let us go one by one:
+
+Firstly, I have to fix the mousepad issue.
+This involves copying the libinput file to the right place.
+
+`sudo cp ~/archinstall/40-libinput.conf /etc/X11/xorg.conf.d/
+`
+
+## Install Grub Theme 
+
+I like to install my own BSOL theme for Grub so that is also done as well.
+
+# Other Setups
+
+Although the above steps would be more than enough to have a fully functional system, it is good practice to go through the following points before fully using the system. Since these points cant be clubbed int various groups, and some of them may require personal attention based on the hardware, privacy situations etc., I would keep the points open ended.
+
+Some things to consider include:
+
+- Fixing the timing of the windows system since Arch install can change the hardware clock.
+- Adding GPG keys
+- Adding SSH keys (for local SSHing, Github keys for pulling repos etc.)
+
+
+
+# Ending Comments
+
+I know this post ended up being bits and pieces consolidated together. The end script, even though is a good starting point, must never be tried in production unless it has been tweaked and tested appropriately. But it gives a good idea of the steps taken to reach a system that I use on a daily basis.

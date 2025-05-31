@@ -1,0 +1,41 @@
+---
+title: "Setting up DooM Emacs"
+description: "How I set up DooM Emacs on Arch Linux"
+date: 10-08-2024
+categories: [Archlinux, Emacs] 
+image: preview-image.png
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+I planned to use Emacs full time and rather than building emacs config from scratch ( which I have tried but felt cumbersome to work with) I thought of using DooM Emacs. Hence this post to document the steps that I take on Arch linux so that it helps others as well as myself the next time I do a fresh setup. The following guide is made for me, as well as for those who has some idea on using Vim or Vi like editors since DooM Emacs runs more or less like Vim, with the extra functionality of Emacs.
+
+# Prerequisites
+
+This guide assumes you are runnig on Arch Linux with ripgrep and [fd (optional)](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://github.com/sharkdp/fd&ved=2ahUKEwiAj8zzmYWJAxVD8DgGHRjFLpEQFnoECA0QAQ&usg=AOvVaw2MP0rg8rFdYXcAOpJkKwRu) installed.
+
+# Setting up till getting a working Emacs
+
+Start by installing the emacs package from the Arch repositories. Then run the following commands to download the doom emacs files:
+
+
+```sh
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install
+
+```
+
+Once done with that, open up Emacs.
+
+For me, I found that some glyphs were not rendered properly, so install the necessary fonts by running the command `M-x nerd-icons-install-fonts`.
+
+Open the init.el file in the doom config and edit whatever options that are required.
+
+Since I am following [DT's](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3Diab2z21cRqA&ved=2ahUKEwjh3eC1ioWJAxXX3jgGHZlpI_IQtwJ6BAgLEAI&usg=AOvVaw1zFJa2afmIyaVZfz0Bxpw5) guide, I thought the next step of installing the EviL Tutor made sense. Hence I install it by adding it to the packages.el file.
+
+Before moving on, I would like to change the font size, so I uncommented the default font lines provided in the config.el file. But this involves installing the `Fira Code` and the `Fira Sans` fonts using Pacman in Arch. Also I changed the font size given by default (as of writing this guide, DooM Emacs is on version 24.11).
+
+Every time a change is made in the config files in the doom config directory, make sure to quit and emacs to see the new changes.
+
+Now you can move on, learn along the way by going through the DooM documentation (you can view it on Emacs by typing `SPC h d h`). 
+Hope this helps.
+

@@ -1,0 +1,26 @@
+# options specified here will apply to all posts in this folder
+
+# re-render posts only when a change to the source file is made
+freeze: auto
+
+# enable banner style title blocks
+title-block-banner: true
+
+# Author goes to all blog posts
+author:
+  - name: "K. Harishankar"
+    url: "https://www.harishnkr.in"
+
+comments:
+  giscus:
+    repo: "harishnkr/harishnkr.github.io"
+    repo-id: "R_kgDOOF2GLg"
+    category: "Announcements"
+    category-id: "DIC_kwDOOF2GLs4CqZQz"
+    mapping: "pathname"
+    reactions-enabled: true
+    input-position: "bottom"
+    theme:
+      dark: dark_dimmed
+      light: light
+    loading: "lazy"

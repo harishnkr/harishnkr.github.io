@@ -1,0 +1,17 @@
+---
+title: ""
+description: ""
+date: 05-14-2025
+categories: [Archlinux, Linux] 
+image: preview-image.png
+draft: true # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+xset s options
+xset q 
+xset dpms options
+betterlockscreen timeout option
+xss-lock
+scripts
+https://chatgpt.com/c/68233c16-94d0-800b-9884-03180f44164f
+ eventually it is the --composite flag

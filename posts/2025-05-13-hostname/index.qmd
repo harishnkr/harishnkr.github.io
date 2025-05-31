@@ -1,0 +1,40 @@
+---
+title: "Setting Up Hostnames"
+description: "Naming is hard, even your computers"
+date: 05-13-2025
+categories: [Linux, Networking] 
+image: preview-image.png 
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+In search for the right hostnames, you end up in the weirdest of places. This post would help anyone in making sure your system hostnames are proper when renaming it.
+
+# Intro
+
+As my arsenal of systems are increasing, I want a unique hostname for each of them. When we use a variety of services online, the hostnames must be unique but easy to remember as well. In order to make sure no stone is left unturned, I am writing the steps to make sure the renaming is performed robustly
+
+# Choosing a convention
+
+Since the names must have some sort of coherence but at the same unique and easy to remember. I am pretty sure using Pokemon names for their hostnames is not unique but I thought I will go with it. There are plenty of reasons to do this.
+
++ It is easy to remember
++ I will never run out of names
++ It is fun
++ It gives some sort of personality to your computer
++ Naming can be done based on the looks of your laptop.
+
+To make things easy, I will choose from the Pokedex numbering of pkemons till it relates with the appearance of my device.
+
+# Charmeleon
+
+My first ever Laptop is a red Asus Vivobook S15. The name Charmeleon fits right. 
+
+Now that I bought a heavy Acer Nitro gaming laptop, I dont mind calling it Blastoise for now.
+
+# Updating the names
+
+Search and replace the names in these files accordingly for a Linux system:
+
++ `/etc/hostname`
++ `/etc/hosts` (you can add the name along with localhost)
+Usually 127.0.0.1 is reserved for localhost. Adding 127.0.1.1 to the unique hostname is the practice in Debian derivatives and would also work in Arch
