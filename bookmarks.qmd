@@ -20,3 +20,4 @@ Sites where others (usually individuals) post online using quarto websites. Book
 - [Alex Bass](https://alexbass.me/). Written Quarto/Latex resume template [post](https://alexbass.me/posts/resume/).
 - [Deepsha Menghani](https://deepshamenghani.quarto.pub/). Bunch of Quarto posts. Checkout [this](https://deepshamenghani.quarto.pub/portfolio-with-quarto-workshop) presentation.
 - [Louise Sinks](https://lsinks.github.io/). Interesting [post](https://lsinks.github.io/posts/2023-11-01-website-building/website.html) on why one should use Quarto.
+- [crumplab](https://www.crumplab.com/). The Computational Cognition Lab at Brooklyn College of CUNY
