@@ -5,16 +5,16 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>K. Harishankar&#39;s Website</title>
-<link>https://harishnkr.in/posts.html</link>
-<atom:link href="https://harishnkr.in/posts.xml" rel="self" type="application/rss+xml"/>
-<description></description>
+<title>harishnkr</title>
+<link>https://www.harishnkr.in/posts.html</link>
+<atom:link href="https://www.harishnkr.in/posts.xml" rel="self" type="application/rss+xml"/>
+<description>K. Harishankar&#39;s site</description>
 <generator>quarto-1.7.31</generator>
 <lastBuildDate>Mon, 12 May 2025 18:30:00 GMT</lastBuildDate>
 <item>
   <title>Setting Up Hostnames</title>
   <dc:creator>K. Harishankar</dc:creator>
-  <link>https://harishnkr.in/posts/2025-05-13-hostname/</link>
+  <link>https://www.harishnkr.in/posts/2025-05-13-hostname/</link>
   <description><![CDATA[ 
 
 
@@ -58,14 +58,14 @@
  ]]></description>
   <category>Linux</category>
   <category>Networking</category>
-  <guid>https://harishnkr.in/posts/2025-05-13-hostname/</guid>
+  <guid>https://www.harishnkr.in/posts/2025-05-13-hostname/</guid>
   <pubDate>Mon, 12 May 2025 18:30:00 GMT</pubDate>
-  <media:content url="https://harishnkr.in/posts/2025-05-13-hostname/preview-image.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://www.harishnkr.in/posts/2025-05-13-hostname/preview-image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Arch Linux Installation</title>
   <dc:creator>K. Harishankar</dc:creator>
-  <link>https://harishnkr.in/posts/2025-05-10-arch-linux-installation/</link>
+  <link>https://www.harishnkr.in/posts/2025-05-10-arch-linux-installation/</link>
   <description><![CDATA[ 
 
 
@@ -160,14 +160,14 @@
  ]]></description>
   <category>Archlinux</category>
   <category>Linux</category>
-  <guid>https://harishnkr.in/posts/2025-05-10-arch-linux-installation/</guid>
+  <guid>https://www.harishnkr.in/posts/2025-05-10-arch-linux-installation/</guid>
   <pubDate>Wed, 07 May 2025 18:30:00 GMT</pubDate>
-  <media:content url="https://harishnkr.in/posts/2025-05-10-arch-linux-installation/preview-image.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://www.harishnkr.in/posts/2025-05-10-arch-linux-installation/preview-image.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>Setting up DooM Emacs</title>
   <dc:creator>K. Harishankar</dc:creator>
-  <link>https://harishnkr.in/posts/2024-10-08-doom-emacs/</link>
+  <link>https://www.harishnkr.in/posts/2024-10-08-doom-emacs/</link>
   <description><![CDATA[ 
 
 
@@ -205,9 +205,9 @@ font-style: inherit;">~/.config/emacs/bin/doom</span> install</span></code></pre
  ]]></description>
   <category>Archlinux</category>
   <category>Emacs</category>
-  <guid>https://harishnkr.in/posts/2024-10-08-doom-emacs/</guid>
+  <guid>https://www.harishnkr.in/posts/2024-10-08-doom-emacs/</guid>
   <pubDate>Mon, 07 Oct 2024 18:30:00 GMT</pubDate>
-  <media:content url="https://harishnkr.in/posts/2024-10-08-doom-emacs/preview-image.png" medium="image" type="image/png" height="78" width="144"/>
+  <media:content url="https://www.harishnkr.in/posts/2024-10-08-doom-emacs/preview-image.png" medium="image" type="image/png" height="78" width="144"/>
 </item>
 </channel>
 </rss>
