@@ -6,15 +6,19 @@ about:
   image: assets/head.jpg
   links:
     - text: Blog
+      icon: pen
       file: posts.qmd
     - icon: github
       text: GitHub
       href: https://github.com/harishnkr
+    - text: linkedin
+      icon: linkedin
+      href: https://www.linkedin.com/in/kharishankar
 format:
   html:
     page-layout: full
 ---
 
-I'm Hari and welcome to my website. I am currently doing PhD in Information Technology/Systems at Indian Institute of Management Lucknow.
+I'm Hari and welcome to my website.
 
-
+I am currently doing PhD in Information Technology/Systems at Indian Institute of Management Lucknow.
