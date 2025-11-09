@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="K. Harishankar">
+<meta name="dcterms.date" content="2025-05-08">
+<meta name="description" content="Documenting new fresh Arch Linux installation">
 
-<title>Blog</title>
+<title>Arch Linux Installation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,30 +26,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5a5388d705fef2bc324f8386d02b4cd7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-22e4e36cb05441028d1fd7ba7eb181ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-5a5388d705fef2bc324f8386d02b4cd7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5a5388d705fef2bc324f8386d02b4cd7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-22e4e36cb05441028d1fd7ba7eb181ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-5a5388d705fef2bc324f8386d02b4cd7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,67 +75,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -302,11 +245,11 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -316,15 +259,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">harishnkr</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./bookmarks.html"> 
+    <a class="nav-link" href="../../bookmarks.html"> 
 <span class="menu-text">Bookmarks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -336,140 +279,161 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Arch Linux Installation</h1>
+                  <div>
+        <div class="description">
+          Documenting new fresh Arch Linux installation
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Archlinux</div>
+                <div class="quarto-category">Linux</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://www.harishnkr.in">K. Harishankar</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 8, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QXJjaGxpbnV4">Archlinux <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RW1hY3M=">Emacs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGludXg=">Linux <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TmV0d29ya2luZw==">Networking <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#pre-setup" id="toc-pre-setup" class="nav-link" data-scroll-target="#pre-setup">Pre-Setup</a>
+  <ul class="collapse">
+  <li><a href="#partitioning" id="toc-partitioning" class="nav-link" data-scroll-target="#partitioning">Partitioning</a></li>
+  <li><a href="#arch-iso-steps-to-follow" id="toc-arch-iso-steps-to-follow" class="nav-link" data-scroll-target="#arch-iso-steps-to-follow">Arch ISO steps to follow</a></li>
+  </ul></li>
+  <li><a href="#post-setup" id="toc-post-setup" class="nav-link" data-scroll-target="#post-setup">Post-Setup</a>
+  <ul class="collapse">
+  <li><a href="#detecting-windows" id="toc-detecting-windows" class="nav-link" data-scroll-target="#detecting-windows">Detecting Windows</a></li>
+  <li><a href="#hardware-tweaks" id="toc-hardware-tweaks" class="nav-link" data-scroll-target="#hardware-tweaks">Hardware Tweaks</a></li>
+  <li><a href="#install-grub-theme" id="toc-install-grub-theme" class="nav-link" data-scroll-target="#install-grub-theme">Install Grub Theme</a></li>
+  </ul></li>
+  <li><a href="#other-setups" id="toc-other-setups" class="nav-link" data-scroll-target="#other-setups">Other Setups</a></li>
+  <li><a href="#ending-comments" id="toc-ending-comments" class="nav-link" data-scroll-target="#ending-comments">Ending Comments</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Blog</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TGludXglMkNOZXR3b3JraW5n" data-listing-date-sort="1747074600000" data-listing-file-modified-sort="1762725077414" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="273">
-<div class="thumbnail"><a href="./posts/hostname/index.html" class="no-external">
+<p>This is my post on documenting a fresh Arch Setup on my newer laptop. I hope by doing this exercise I can go back to troubleshoot any possible issues before, during and after the setup.</p>
+<p>This post is to be utilised along with the Arch wiki <a href="https://wiki.archlinux.org/title/Installation_guide">Guide</a> on installation, and more importantly, many steps would be different from the main page recommendations since it will be customised and curated based on my needs.</p>
+<section id="motivation" class="level1">
+<h1>Motivation</h1>
+<p>Compared to my progress in installation of a Arch Linux setups in the past, this time I thought documenting the process would help me in different ways:</p>
+<ul>
+<li>It can help in troubleshooting throughout the processs as well as in the future.</li>
+<li>May help in creating scripts for automated installation in my future attempts of Arch installs.</li>
+</ul>
+<p>I would divide the post into 2 parts, pre setup which include some necessary steps that must be taken regardless of customising(from a personal perspective, even this could be subjected to changes for many people), and post setup, in which I can document the steps I could take to reach the setup that I currently use in my old laptop.</p>
+<p>I would try to keep the steps which I am familiar and already well documented in the Arch wiki short and note any important points to take care which may or may not be specific to my setup.</p>
+</section>
+<section id="pre-setup" class="level1">
+<h1>Pre-Setup</h1>
+<section id="partitioning" class="level2">
+<h2 class="anchored" data-anchor-id="partitioning">Partitioning</h2>
+<p>Start by clearing some space (shrink volume, as it is so called) from Windows partition manager (Disk Management utility as it is known). Choosing how much space depends on the needs and the past experience. As far as I am concerned, the total space is around 1TB, out of which I have to allocate from the available 950 GB space.</p>
+<p>Let us do a bunch of math to sort this issue out. In terms of usage, the <code>/</code> or the root partition is around 22GB which can be extended to about 30GB at max. I have a separate <code>/var</code> partition earlier which I believe I dont require in this installation. I would rather club it in the root partition. The <code>/var</code> partition is around 20GB which has hit the limit a few times. It is not an issue as it can be easily cleaned from time to time. Adding it to the root we get around 50GB.</p>
+<p>The <code>/home</code> partition uses 18GBG for now and I plan to use local LLMs in the future, it would be good enough for a start to have the size upto around 100GB or more if needed. Also since the ram could be full from time to time, it would be fine to have some swap partition. My current system uses a swapfile located in the root partition, and I would expect it to use(if necessary) upto maybe 10GB.</p>
+<p>The <code>/boot/efi</code> partition uses less than half an MB. So it would be safe to make this partition around 100MB</p>
+<p>Adding it all up we get around 155GB. Nevertheless what we have done so far is just a practice to see whether it would be worth shrinking up volume on the current disk which already has around 750GB of space free.</p>
+<p>Hence we can shrink around 250GB of volume, of which:</p>
+<ul>
+<li>60GB which accounts for <code>/</code> or root partition, <code>/var</code> partition as well as for the swap file</li>
+<li>150GB for the <code>/home</code> partition</li>
+<li>around 100MB for containing <code>/boot/efi</code></li>
+</ul>
+<p>Since the Windows Disk Management asks for input in MBs, it seems easier to input to 216000MB, and whatever is left after the first 2 partitions can be allocated to the <code>/boot/efi</code> partition.</p>
+<p>I use Ventoy on the USB for running the Arch ISO, and it is always better to use the latest image</p>
+<p>As I have mentioned before, this post is to be used alongside the ArchWiki installation guide (as you might have guessed from the mental gymnastics that I have done so far to calculate the partition sizes). To make things easier, I would create a Github repo to upload files that I create along.</p>
+<p>While doing the whole thing I came across another issue that might need a whole post on its own. Basically you need to setup a BIOS password to enable booting through other media. Doing that bricks your Windows pin/password. Moreover, in order to boot other media, you have to change some other options as well(enable F12 boot menu).</p>
+</section>
+<section id="arch-iso-steps-to-follow" class="level2">
+<h2 class="anchored" data-anchor-id="arch-iso-steps-to-follow">Arch ISO steps to follow</h2>
+<p>At first I planned to manually install. My previous tries to run the Archinstall script long back failed. But I did go forward and went on to run the Archinstall script. Points to keep in mind that include the changes from the base archinstall script:</p>
+<ul>
+<li>locale is en_IN, dont forget to add <code>en_US.utf8</code> too</li>
+<li><code>/</code> is ext4 60GB, <code>/home</code> is ext4 150Gb and third partition is <code>/boot/efi</code> which must be fat32 and to be made bootable.</li>
+<li>used bspwm as the window-manager</li>
+<li>timezone given as Asia/Kolkata</li>
+<li>dont forget to add git and os-prober as other packages that needs to be installed</li>
+<li>Make sure to install sddm as the greeter</li>
+</ul>
+<p>Once the script runs it asks whether to chroot. Do that and install the necessary packages. Installing git would be a starting point. Change to a regular user to install yay.</p>
+<p>Most of the following instructions are automated in the install script from this repo. The changes that are being done is only mentioned in the part below. Note that many command would be run in sudo elevated privileges so beware before running the scripts</p>
+</section>
+</section>
+<section id="post-setup" class="level1">
+<h1>Post-Setup</h1>
+<p>After that is done, install the list of packages from the text file in the repo <code>yay -S --needed --noconfirm - &lt; packages.txt</code> Install the dotfiles and the NewtonRice files initially Some other configs to be included are the termrainbow repo, nvim config and doom emacs config To complete the DooM Emacs configuration, it would be good to check out <a href="https://harishnkr.in/posts/2024-10-08-doom-emacs/">this</a> simple guide that I shared before For the terminal to run with minimal configuration, it is important to stow <code>zsh</code> and change the shell</p>
+<p>For the GUI to run make sure to install a terminal(personal version of ST terminal) and NewtonRice GUI stows. Make sure to copy the fonts and wallpapers first If TPM or the tmux plugin manager is not installing the plugins, manually run the <code>install_plugins</code> script in the tmp scripts folder Before rebooting, make sure Windows is recognised in the grub file</p>
+<section id="detecting-windows" class="level2">
+<h2 class="anchored" data-anchor-id="detecting-windows">Detecting Windows</h2>
+<p>In order for os-prober to run, make sure the line is present in <code>/etc/default/grub</code> <code>GRUB_DISABLE_OS_PROBER=false</code> <code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code></p>
+<p>Make sure to mount the Windows filesystem. Make a directory <code>/c</code> and mount it. <code>sudo mkdir /c sudo mount /dev/WINDOWS_DIR /c</code> (change windows directory with whatever your mountpoint is)</p>
+</section>
+<section id="hardware-tweaks" class="level2">
+<h2 class="anchored" data-anchor-id="hardware-tweaks">Hardware Tweaks</h2>
+<p>Some files are to be loaded for optimal working of the hardware. Most of the drivers run by default easily on Arch. Nevertheless there may be changes needed as well. Let us go one by one:</p>
+<p>Firstly, I have to fix the mousepad issue. This involves copying the libinput file to the right place.</p>
+<p><code>sudo cp ~/archinstall/40-libinput.conf /etc/X11/xorg.conf.d/</code></p>
+</section>
+<section id="install-grub-theme" class="level2">
+<h2 class="anchored" data-anchor-id="install-grub-theme">Install Grub Theme</h2>
+<p>I like to install my own BSOL theme for Grub so that is also done as well.</p>
+</section>
+</section>
+<section id="other-setups" class="level1">
+<h1>Other Setups</h1>
+<p>Although the above steps would be more than enough to have a fully functional system, it is good practice to go through the following points before fully using the system. Since these points cant be clubbed int various groups, and some of them may require personal attention based on the hardware, privacy situations etc., I would keep the points open ended.</p>
+<p>Some things to consider include:</p>
+<ul>
+<li>Fixing the timing of the windows system since Arch install can change the hardware clock.</li>
+<li>Adding GPG keys</li>
+<li>Adding SSH keys (for local SSHing, Github keys for pulling repos etc.)</li>
+</ul>
+</section>
+<section id="ending-comments" class="level1">
+<h1>Ending Comments</h1>
+<p>I know this post ended up being bits and pieces consolidated together. The end script, even though is a good starting point, must never be tried in production unless it has been tweaked and tested appropriately. But it gives a good idea of the steps taken to reach a system that I use on a daily basis.</p>
 
-<img loading="lazy" src="./posts/hostname/preview-image.png" class="thumbnail-image">
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hostname/index.html" class="no-external">Setting Up Hostnames</a>
-</h3>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TGludXg='); return false;">Linux</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TmV0d29ya2luZw=='); return false;">Networking</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/hostname/index.html" class="no-external">
-<p>Naming is hard, even your computers</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/hostname/index.html" class="no-external">
-<div class="listing-date">
-May 13, 2025
-</div>
-<div class="listing-author">
-K. Harishankar
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="QXJjaGxpbnV4JTJDTGludXg=" data-listing-date-sort="1746642600000" data-listing-file-modified-sort="1762725077414" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1310">
-<div class="thumbnail"><a href="./posts/arch-linux-installation/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/arch-linux-installation/preview-image.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/arch-linux-installation/index.html" class="no-external">Arch Linux Installation</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXJjaGxpbnV4'); return false;">Archlinux</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGludXg='); return false;">Linux</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/arch-linux-installation/index.html" class="no-external">
-<p>Documenting new fresh Arch Linux installation</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/arch-linux-installation/index.html" class="no-external">
-<div class="listing-date">
-May 8, 2025
-</div>
-<div class="listing-author">
-K. Harishankar
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="QXJjaGxpbnV4JTJDRW1hY3M=" data-listing-date-sort="1728325800000" data-listing-file-modified-sort="1762725077414" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="328">
-<div class="thumbnail"><a href="./posts/doom-emacs/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/doom-emacs/preview-image.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/doom-emacs/index.html" class="no-external">Setting up DooM Emacs</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXJjaGxpbnV4'); return false;">Archlinux</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RW1hY3M='); return false;">Emacs</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/doom-emacs/index.html" class="no-external">
-<p>How I set up DooM Emacs on Arch Linux</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/doom-emacs/index.html" class="no-external">
-<div class="listing-date">
-Oct 8, 2024
-</div>
-<div class="listing-author">
-K. Harishankar
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -883,6 +847,38 @@ K. Harishankar
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark_dimmed">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "harishnkr/harishnkr.github.io";
+    script.dataset.repoId = "R_kgDOOF2GLg";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOOF2GLs4CqZQz";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "bottom";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 
